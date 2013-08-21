@@ -4,7 +4,7 @@ var fs = require('fs');
 var path = require('path');
 var colors = require('colors');
 var tokens = process.argv.slice(2, process.argv.length);
-var pm = require('../lib/pluginmerger');
+var pm = require('../lib/plugin_merger');
 
 if( process.argv.length <= 2){
     help();
@@ -13,8 +13,7 @@ if( process.argv.length <= 2){
 
 function help(){
     var c = fs.readFileSync(path.join(__dirname, '..', 'doc', 'help.txt'), 'utf-8');
-    console.log(colors.blue);
-    console.log(c);
+    console.log(c.blue);
 }
 
 pm.apply(null, tokens);
