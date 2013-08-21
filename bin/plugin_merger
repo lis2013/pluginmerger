@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var path = require('path');
+var colors = require('colors');
+var tokens = process.argv.slice(2, process.argv.length);
+var pm = require('../lib/pluginmerger');
+
+if( process.argv.length <= 2){
+    help();
+    process.exit(0);
+}
+
+function help(){
+    var c = fs.readFileSync(path.join(__dirname, '..', 'doc', 'help.txt'), 'utf-8');
+    console.log(colors.blue);
+    console.log(c);
+}
+
+pm.apply(null, tokens);
+
+
+

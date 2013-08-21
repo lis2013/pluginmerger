@@ -1,0 +1,32 @@
+{
+  "name": "plugin_merger",
+  "version": "0.0.1",
+  "description": "merge all plugin js to xface.js",
+  "main": "./lib/plugin_merger",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "no test"
+  },
+  "repository":{
+    "type":"git",
+    "url":""
+  },
+   "bin":{
+     "pm":"./bin/plugin_merger"
+   },
+  "keywords": [
+    "plugin",
+    "merge"
+  ],
+  "dependencies":{
+      "colors":"0.6.1"
+  },
+  "engines":{
+      "node": "*"
+  },
+  "author": "lis",
+  "license": "BSD"
+}
